@@ -7,6 +7,8 @@
 body {
     font-family: 'Roboto', sans-serif;
     color: #111111;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Reset CSS */
@@ -237,7 +239,6 @@ textarea {
     padding: 0 55px;
     width: 100%;
     max-width: 1760px;
-    height: 960px;
     margin: 0 auto;
     text-align: center;
 }
@@ -251,18 +252,18 @@ textarea {
     max-width: 1760px;
 }
 
-/* Main - Sections Common setting */
+/* Main - articles Common setting */
 
-.section-title {
+.article-title {
     font-size: 43px;
     line-height: 47.3px;;
 }
 
-.section-paragraph {
+.article-paragraph {
     font-size: 16px;
 }
 
-.section-button {
+.article-button {
     display: inline-block;
     font-size: 16px;
     line-height: 1.5;
@@ -275,22 +276,22 @@ textarea {
     transition: opacity 0.2s ease-in-out;
 }
 
-.section-button.inverted {
+.article-button.inverted {
     background-color: #fff;
     color: #111111;
 }
 
-.section-button:hover {
+.article-button:hover {
     opacity: 0.8;
 }
 
-.section-image {
+.article-image {
     width: 100%;
     height: auto;
     margin-bottom: 45px;
 }
 
-.section-category {
+.article-category {
     display: block;
     text-align: left;
     font-size: 23px;
@@ -298,21 +299,21 @@ textarea {
     margin-bottom: 20px;
 }
 
-.section-card-desc {
+.article-card-desc {
     position: absolute;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
 
-.section-card-desc strong {
+.article-card-desc strong {
     display: block;
     color: #fff;
     font-size: 20px;
     margin-bottom: 26px;
 }
 
-.section-card-desc .section-button {
+.article-card-desc .article-button {
     margin-bottom: 0;
 }
 
@@ -361,53 +362,53 @@ textarea {
     margin-bottom: 15px;
 }
 
-/* Main - First Section */
+/* Main - First article */
 
-.first-section {
+.first-article {
     margin-bottom: 150px;
 }
 
-.first-section .section-title {
+.first-article .article-title {
     margin-bottom: 13px;
 }
 
-.first-section .section-paragraph {
+.first-article .article-paragraph {
     margin-bottom: 20px;
 }
 
-/* Main - Second Section */
+/* Main - Second article */
 
-.second-section {
+.second-article {
     margin-bottom: 110px;
 }
 
-.second-section .section-title {
+.second-article .article-title {
     margin-bottom: 20px;
 }
 
-.second-section .section-paragraph {
+.second-article .article-paragraph {
     margin-bottom: 25px;
 }
 
-.second-section.section-button:first-child {
+.second-article.article-button:first-child {
     margin-right: 3px;
 }
 
-.second-section .section-button:last-child {
+.second-article .article-button:last-child {
     margin-bottom: 0;
 }
 
-/* Main - Third Section */
+/* Main - Third article */
 
-.third-section {
+.third-article {
     margin-bottom: 90px;
 }
 
-.third-section .section-card {
+.third-article .article-card {
     display: flex;
 }
 
-.third-section .section-card-item {
+.third-article .article-card-item {
     position: relative;
     display: block;
     width: 50%;
@@ -418,54 +419,54 @@ textarea {
     background-size: cover;
 }
 
-.third-section .section-card-desc {
+.third-article .article-card-desc {
     left: 48px;
     bottom: 48px;
 }
 
-.third-section .section-card-item:last-child {
+.third-article .article-card-item:last-child {
     margin-right: 0;
 }
 
-.third-section .section-card-item.left {
+.third-article .article-card-item.left {
     background-image: url(./assets/images/main3_1.jpg);
 }
 
-.third-section .section-card-item.right {
+.third-article .article-card-item.right {
     background-image: url(./assets/images/main3_2.jpg);
 }
 
-/* Main - Fourth Section */
+/* Main - Fourth article */
 
-.fourth-section {
+.fourth-article {
     margin-bottom: 90px;
 }
 
-/* Main - Fifth Section */
+/* Main - Fifth article */
 
-.fifth-section {
+.fifth-article {
     margin-bottom: 255px;
 }
 
-.fifth-section .section-card {
+.fifth-article .article-card {
     display: flex;
 }
 
-.fifth-section .section-card-item {
+.fifth-article .article-card-item {
     position: relative;
     margin-right: 16px;
 }
-.fifth-section.section-card-item:last-child {
+.fifth-article.article-card-item:last-child {
     margin-right: 0;
 }
 
-.fifth-section .section-card-item img {
+.fifth-article .article-card-item img {
     display: block;
     width: 100%;
     max-width: 576px;
 }
 
-.fifth-section .section-card-desc {
+.fifth-article .article-card-desc {
     position: absolute;
     top: 55px;
     left: 50px;
@@ -475,4 +476,46 @@ textarea {
 
 .footer {
     background-color: #111111;
+    width: 100%;
 }
+
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    padding: 60px 0 45px;
+}
+
+.footer-nav-box {
+    margin-right: 130px;
+}
+
+.footer-nav-box:last-child {
+    margin-right: 0;
+}
+
+.footer-nav-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-nav-menu-title {
+    display: flex;
+    font-size: 13px;
+    line-height: 18px;
+    color: #fff;
+    margin-bottom: 16px;
+}
+
+.footer-nav-item {
+    font-size: 11px;
+    color: #999999;
+    margin-bottom: 16px;
+}
+
+.footer-nav-item:hover {
+    color: #fff;
+}
+
+/* padding-bottom 조정 */
+/* social image 추가 */
+/* 아래 footer 추가하면 완성? */
