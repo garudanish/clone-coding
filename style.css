@@ -6,6 +6,7 @@
 
 body {
     font-family: 'Roboto', sans-serif;
+    color: #111111;
 }
 
 /* Reset CSS */
@@ -171,7 +172,6 @@ textarea {
     clear: both;
     margin-right: 100px;
     font-size: 16px;
-    color: rgb(17, 17, 17);
 }
 
 .sub1-menu:last-child {
@@ -231,18 +231,248 @@ textarea {
     background-color: #e5e5e5;
 }
 
-/* Main: 임시로 만들어 둠 */
+/* Main */
 
-.main-banner {
-    display: block;
+.main {
     padding: 0 55px;
     width: 100%;
     max-width: 1760px;
     height: 960px;
     margin: 0 auto;
+    text-align: center;
+}
+
+.main-banner {
+    margin-bottom: 45px;
 }
 
 .main-video {
     width: 100%;
     max-width: 1760px;
+}
+
+/* Main - Sections Common setting */
+
+.section-title {
+    font-size: 43px;
+    line-height: 47.3px;;
+}
+
+.section-paragraph {
+    font-size: 16px;
+}
+
+.section-button {
+    display: inline-block;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 700;
+    padding: 8px 28px;
+    margin-bottom: 100px;
+    border-radius: 100px;
+    background-color: #111111;
+    color: #fff;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.section-button.inverted {
+    background-color: #fff;
+    color: #111111;
+}
+
+.section-button:hover {
+    opacity: 0.8;
+}
+
+.section-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 45px;
+}
+
+.section-category {
+    display: block;
+    text-align: left;
+    font-size: 23px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.section-card-desc {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.section-card-desc strong {
+    display: block;
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 26px;
+}
+
+.section-card-desc .section-button {
+    margin-bottom: 0;
+}
+
+/* Main - Horizontal Scroll */
+
+.horizontal-scroll {
+    display: flex;
+    overflow: auto;
+    width: 100%;
+    height: auto;
+}
+
+.horizontal-scroll-item {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 33%;
+    height: auto;
+    max-width: 576px;
+    padding-bottom: 36px;
+    margin-right: 16px;
+    flex-shrink: 0;
+}
+
+.horizontal-scroll-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 576px;
+    margin-bottom: 25px;
+}
+
+.horizontal-scroll-item .item-name {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.horizontal-scroll-item p {
+    display: block;
+    color: #8d8d8d;
+    font-size: 16px;
+}
+
+.horizontal-scroll-item .item-category {
+    margin-bottom: 15px;
+}
+
+/* Main - First Section */
+
+.first-section {
+    margin-bottom: 150px;
+}
+
+.first-section .section-title {
+    margin-bottom: 13px;
+}
+
+.first-section .section-paragraph {
+    margin-bottom: 20px;
+}
+
+/* Main - Second Section */
+
+.second-section {
+    margin-bottom: 110px;
+}
+
+.second-section .section-title {
+    margin-bottom: 20px;
+}
+
+.second-section .section-paragraph {
+    margin-bottom: 25px;
+}
+
+.second-section.section-button:first-child {
+    margin-right: 3px;
+}
+
+.second-section .section-button:last-child {
+    margin-bottom: 0;
+}
+
+/* Main - Third Section */
+
+.third-section {
+    margin-bottom: 90px;
+}
+
+.third-section .section-card {
+    display: flex;
+}
+
+.third-section .section-card-item {
+    position: relative;
+    display: block;
+    width: 50%;
+    height: 700px;
+    margin-right: 16px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.third-section .section-card-desc {
+    left: 48px;
+    bottom: 48px;
+}
+
+.third-section .section-card-item:last-child {
+    margin-right: 0;
+}
+
+.third-section .section-card-item.left {
+    background-image: url(./assets/images/main3_1.jpg);
+}
+
+.third-section .section-card-item.right {
+    background-image: url(./assets/images/main3_2.jpg);
+}
+
+/* Main - Fourth Section */
+
+.fourth-section {
+    margin-bottom: 90px;
+}
+
+/* Main - Fifth Section */
+
+.fifth-section {
+    margin-bottom: 255px;
+}
+
+.fifth-section .section-card {
+    display: flex;
+}
+
+.fifth-section .section-card-item {
+    position: relative;
+    margin-right: 16px;
+}
+.fifth-section.section-card-item:last-child {
+    margin-right: 0;
+}
+
+.fifth-section .section-card-item img {
+    display: block;
+    width: 100%;
+    max-width: 576px;
+}
+
+.fifth-section .section-card-desc {
+    position: absolute;
+    top: 55px;
+    left: 50px;
+}
+
+/* Footer */
+
+.footer {
+    background-color: #111111;
 }
