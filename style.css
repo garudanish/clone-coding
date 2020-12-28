@@ -406,11 +406,11 @@ textarea {
 }
 
 .footer-nav-box {
-    margin-right: 130px;
+    display: none;
 }
 
-.footer-nav-box:last-child {
-    margin-right: 0;
+.footer-nav-box.mobile {
+    display:block;
 }
 
 .footer-nav-menu {
@@ -503,10 +503,12 @@ textarea {
 /* Footer - Info */
 .footer-info {
     display: flex;
-    justify-content: center;
-    padding: 20px 0 30px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 25px 35px 35px;
     font-size: 11px;
     color: #999999;
+    background-color: #1d1d1d;
 }
 
 .footer-info div {
@@ -518,7 +520,7 @@ textarea {
 }
 
 .footer-info-company {
-    margin-right: 30px;
+    margin-bottom: 25px;
 }
 
 .footer-info-insuarance {
@@ -735,8 +737,33 @@ textarea {
     margin-right: 20px;
 }
 
-/* Main */
+/* Footer */
 
+.footer-nav-box {
+    display: block;
+    margin-right: 130px;
+}
+
+.footer-nav-box:last-child {
+    margin-right: 0;
+}
+
+/* Footer - info */
+
+.footer-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 20px 0 30px;
+    font-size: 11px;
+    background-color: #111111;
+    color: #999999;
+}
+
+.footer-info-company {
+    margin-bottom: 0;
+    margin-right: 30px;
+}
 }
 
 @media screen and (min-width: 1200px) {
