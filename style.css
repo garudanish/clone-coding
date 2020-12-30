@@ -4,7 +4,27 @@
 }
 
 body {
-    font-family: "NanumSquare", sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* -----
+SVG Icons - svgicons.sparkk.fr
+----- */
+
+.svg-icon {
+    width: 1em;
+    height: 1em;
+}
+
+.svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
+fill: #fff;
+}
+
+.svg-icon circle {
+stroke: #fff;
+stroke-width: 2;
 }
 
 /* Reset CSS */
@@ -42,4 +62,78 @@ button,
 input,
 textarea {
     font-family: "NanumSquare", sans-serif;
+}
+
+/* Header */
+
+.mobile-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 44px;
+    padding: 7px 10px;
+    background-color: #000000;
+    color: #fff;
+}
+
+.mobile-burger-menu {
+    width: 2rem;
+}
+
+.burger-menu-icon {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: #fff;
+}
+
+.burger-menu--middle {
+    margin: 4px 0;
+}
+
+.mobile-nav__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobile-nav__logo h1 {
+    display: flex;
+    align-items: center;
+    font-weight: 900;
+}
+
+.mobile-nav__logo h1 img {
+    display: block;
+    width: auto;
+    height: 30px;
+    margin-right: 8px;
+}
+
+.mobile-nav__user--button {
+    display: flex;
+    padding: 10px 8px;
+    border-radius: 5px;
+    background-color: #52b69e;
+    color: #fff;
+    font-weight: 900;
+    font-size: 16px;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobile-nav__user--button .icon {
+    width: auto;
+    height: 16px;
+    margin-right: 4px;
+}
+
+@media screen and (min-width:768px) {
+
+
+
+    /* Header - Pre-header */
+    
+
 }
