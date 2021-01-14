@@ -9,6 +9,7 @@ function changeHeaderBG() {
 }
 
 function handleHeaderBG(event) {
+  changeHeaderBG();
   window.addEventListener("scroll", changeHeaderBG);
 }
 

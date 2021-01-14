@@ -51,7 +51,14 @@ textarea {
 }
 
 body {
-  background-color: black;
+  background-color: #014599;
+}
+
+/* Header */
+
+.header {
+  color: white;
+  position: relative;
 }
 
 /* Header: Logo and Hamberger */
@@ -80,10 +87,14 @@ body {
   padding: 20px 22px;
 }
 
-.header__logo-con--hamberger i {
+.header__logo-con--hamberger .fa-bars {
   display: block;
-  width: 20px;
-  height: auto;
+  font-size: 16px;
+}
+
+.header__logo-con--hamberger .fa-times {
+  display: none;
+  font-size: 16px;
 }
 
 /* Header: Logo and Hamberger when is NOT at the top */
@@ -115,3 +126,55 @@ body {
 }
 
 /* Header: Menu */
+
+.header__menu {
+  width: 100%;
+}
+
+/* Header: User */
+
+.header__user {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.header__user a {
+  display: block;
+  flex-grow: 1;
+  padding: 13px 20px;
+  border: 1px solid #86bcff;
+  border-radius: 4px;
+  margin-right: 12px;
+  text-align: center;
+}
+
+.header__user a:last-child {
+  margin-right: 0;
+}
+
+.header__user a i {
+  color: #86bcff;
+  margin-right: 10px;
+}
+
+.header__menu {
+  position: absolute;
+  top: 60px;
+  padding: 20px;
+}
+
+.header__nav__depth1 li {
+  border-top: 1px solid #012859;
+  border-bottom: 1px solid #012859;
+}
+
+.header__nav__depth1 li a {
+  display: block;
+  padding: 20px 10px;
+}
+
+.header__nav__depth1 li span::before {
+  content: "+";
+  margin-right: 16px;
+  color: #86bcff;
+}
