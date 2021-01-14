@@ -49,3 +49,72 @@ textarea {
   content: "";
   clear: both;
 }
+
+body {
+  background-color: black;
+}
+
+/* Header */
+
+.header {
+  width: 100%;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  padding: 14px 18px;
+}
+
+.header__logo img {
+  display: block;
+  width: auto;
+  height: 32px;
+}
+
+.header__hamberger {
+  padding: 20px 22px;
+}
+
+.header__hamberger span {
+  display: block;
+  width: 20px;
+  height: 3px;
+  margin-bottom: 4px;
+}
+
+.header__hamberger span:last-child {
+  margin-bottom: 0;
+}
+
+/* Header when is NOT at the top */
+
+.header {
+  background-color: White;
+}
+
+.header__logo img {
+  filter: none;
+}
+
+.header__hamberger span {
+  background-color: #014599;
+}
+
+/* Header when is at the top */
+
+.header--top {
+  background-color: transparent;
+}
+
+.header--top img {
+  filter: grayscale(1) brightness(5) drop-shadow(rgba(0, 0, 0, 0.5) 1px 1px 2px);
+}
+
+.header--top .header__hamberger span {
+  background-color: white;
+}
