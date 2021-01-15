@@ -5,6 +5,7 @@ const SHOWING = "showing";
 const header = document.querySelector(".header");
 const userMenu = document.querySelector(".header__user");
 const navMenu = document.querySelector(".header__nav");
+const mobileMenu = document.querySelector("header__logo-con--hamberger");
 const hamberger = document.querySelector(".fa-bars");
 const closeMenu = document.querySelector(".fa-times");
 const depth1Menu = document.querySelector(
@@ -40,8 +41,7 @@ function toggleMenu() {
 }
 
 function handleMenu() {
-  hamberger.addEventListener("click", toggleMenu);
-  closeMenu.addEventListener("click", toggleMenu);
+  mobileMenu.addEventListener("click", toggleMenu);
 }
 
 handleMenu();
