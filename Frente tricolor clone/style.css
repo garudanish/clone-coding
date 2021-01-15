@@ -60,11 +60,12 @@ body {
 .header {
   position: relative;
   position: fixed;
+  flex-direction: column;
   width: 100%;
   top: 0;
   left: 0;
   color: white;
-  background-color: White;
+  background-color: #fff;
 }
 
 /* Header: Logo and Hamberger */
@@ -130,17 +131,12 @@ body {
   color: #014599;
 }
 
-/* Header: Menu */
-
-.header__menu {
-  width: 100%;
-}
-
 /* Header: User */
 
 .header__user {
-  display: flex;
-  margin-bottom: 20px;
+  display: none;
+  padding: 20px;
+  background-color: #014599;
 }
 
 .header__user a {
@@ -162,31 +158,14 @@ body {
   margin-right: 10px;
 }
 
-/* Header: Menu */
-
-.header__menu {
-  display: none;
-  position: absolute;
-  background-color: #014599;
-  top: 60px;
-  padding: 20px;
-}
-
-/* Menu - When cliked */
-
-.mobile--clicked {
-  display: block;
-}
-
-.mobile--clicked .header__logo-con--hamberger .fa-bars {
-  display: none;
-}
-
-.mobile--clicked .header__logo-con--hamberger .fa-times {
-  display: block;
-}
-
 /* Header: Menu depth 1 */
+
+.header__nav {
+  display: none;
+  flex-direction: column;
+  padding: 0 20px 20px 20px;
+  background-color: #014599;
+}
 
 .header__nav__depth1 li {
   border-top: 1px solid #012859;
@@ -212,7 +191,7 @@ body {
 .header__nav__depth2 {
   margin-left: 25px;
   background-color: #013e89;
-  border: 1px solid #01387b;
+  border: 1px solid #012859;
   color: #ccc;
   border-radius: 3px;
   margin-bottom: 16px;
@@ -231,4 +210,162 @@ body {
   content: "-";
   margin-right: 10px;
   color: #ccc;
+}
+
+/* Menu - When cliked */
+
+.mobile--clicked {
+  display: flex;
+}
+
+.mobile--clicked .header__logo-con--hamberger .fa-bars {
+  display: none;
+}
+
+.mobile--clicked .header__logo-con--hamberger .fa-times {
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header__logo-con {
+    padding: 20px 30px;
+    margin-right: 50px;
+    width: auto;
+  }
+
+  .header__logo-con--logo {
+    width: 50px;
+    height: 40px;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .header__logo-con--logo img {
+    width: auto;
+    height: 40px;
+  }
+
+  .header__logo-con--hamberger {
+    display: none;
+  }
+
+  /* header user */
+
+  .header__user {
+    display: flex;
+    margin-bottom: 0;
+    order: 2;
+    background-color: transparent;
+    color: #666666;
+  }
+
+  .header__user a {
+    padding: 0;
+    border: none;
+    margin-right: 15px;
+  }
+
+  .header__user span {
+    font-size: 11px;
+  }
+
+  .header__user a:last-child {
+    margin-right: 0;
+  }
+
+  .header__user div {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .header__user a i {
+    color: #86bcff;
+    margin-bottom: 10px;
+    margin-right: 0;
+  }
+
+  /* header user when at the top */
+
+  .header--top .header__user {
+    color: #d2e6ff;
+  }
+
+  /* header nav */
+
+  .header__nav {
+    display: block;
+    order: 1;
+    background-color: transparent;
+    color: black;
+    padding: 0;
+  }
+
+  .header__nav__depth1 {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    align-content: center;
+    font-size: 15px;
+  }
+
+  .header__nav__depth1 li span::before,
+  .header__nav__depth2 li span::before {
+    content: "";
+    margin-right: 0;
+  }
+
+  .header__nav__depth1 li {
+    border: none;
+  }
+
+  .header__nav__depth1 li a {
+    display: block;
+    padding: 32px 0;
+    margin-right: 15px;
+  }
+
+  .header__nav__depth1 li:last-child {
+    border: none;
+  }
+
+  .header__nav__depth1 li:last-child a {
+    margin-right: 0;
+  }
+
+  .header__nav__depth2 {
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 60px;
+    left: 65px;
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    color: white;
+    background-color: #a7141e;
+  }
+
+  .header__nav__depth2 li a {
+    padding: 12px 16px;
+    margin: 0;
+  }
+
+  .header__nav__depth2.showing {
+    display: flex;
+  }
+
+  /* header nav when at the top */
+
+  .header--top .header__nav {
+    color: white;
+  }
 }
