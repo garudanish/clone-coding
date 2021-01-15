@@ -52,7 +52,7 @@ textarea {
 
 body {
   background-color: #014599;
-  height: 9000px;
+  height: 3000px;
 }
 
 /* Header */
@@ -66,6 +66,7 @@ body {
   left: 0;
   color: white;
   background-color: #fff;
+  z-index: 999;
 }
 
 /* Header: Logo and Hamberger */
@@ -226,6 +227,100 @@ body {
   display: block;
 }
 
+/* MAIN */
+
+/* Slider */
+
+.main__slider-wrapper {
+  position: relative;
+  height: 280px;
+}
+
+.main__slider--button {
+  position: absolute;
+  width: 100%;
+  height: 280px;
+}
+
+.main__slider--button i {
+  position: absolute;
+  color: #ccc;
+  opacity: 0.7;
+  font-size: 32px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.fa-chevron-circle-left {
+  left: 10px;
+}
+
+.fa-chevron-circle-right {
+  right: 10px;
+}
+
+.main__slider--pattern {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  width: 100%;
+  height: 280px;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.main__slider--slide {
+  width: 100%;
+  height: 280px;
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-size: cover;
+  background-position: center center;
+}
+
+.main__slider--slide.showing {
+  opacity: 1;
+  z-index: 0;
+}
+
+.main__slider--slide:nth-child(1) {
+  background-image: url(./assets/images/main_carousel01.jpg);
+}
+
+.main__slider--slide:nth-child(2) {
+  background-image: url(./assets/images/main_carousel02.jpg);
+}
+
+.main__slider--slide:nth-child(3) {
+  background-image: url(./assets/images/main_carousel03.jpg);
+}
+
+/* Main Symol */
+
+.main__symbol {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  background-image: url(./assets/images/main__symbol--bg.gif);
+  background-size: contain;
+  background-repeat: repeat-x;
+  text-align: center;
+}
+
+.main__symbol img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 1000px;
+  z-index: 10;
+}
+
 @media screen and (min-width: 768px) {
   .header {
     display: flex;
@@ -237,7 +332,6 @@ body {
 
   .header__logo-con {
     padding: 20px 30px;
-    margin-right: 50px;
     width: auto;
   }
 
@@ -367,5 +461,72 @@ body {
 
   .header--top .header__nav {
     color: white;
+  }
+
+  /* MAIN */
+
+  /* Carousel */
+
+  ..main__slider-wrapper,
+  .main__slider--pattern,
+  .main__slider--slide,
+  .main__slider--button {
+    height: 450px;
+  }
+
+  /* Main Symbol */
+  .main__symbol {
+    height: 100px;
+  }
+}
+
+@media screen and (min-width: 980px) {
+  /* MAIN */
+
+  /* Carousel */
+
+  .main__slider-wrapper,
+  .main__slider--pattern,
+  .main__slider--slide,
+  .main__slider--button {
+    height: 550px;
+  }
+
+  /* Main Symbol */
+
+  .main__symbol {
+    height: 120px;
+  }
+
+  .main__symbol img {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .header__logo-con--logo {
+    width: auto;
+    height: 50px;
+    padding: 0;
+  }
+
+  .header__logo-con--logo img {
+    width: auto;
+    height: 50px;
+  }
+}
+
+@media screen and (min-width: 1250px) {
+  .main__slider-wrapper,
+  .main__slider--pattern,
+  .main__slider--slide,
+  .main__slider--button {
+    height: 720px;
+  }
+
+  /* Main Symbol */
+
+  .main__symbol {
+    height: 120px;
   }
 }
