@@ -52,13 +52,19 @@ textarea {
 
 body {
   background-color: #014599;
+  height: 9000px;
 }
 
 /* Header */
 
 .header {
-  color: white;
   position: relative;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  color: white;
+  background-color: White;
 }
 
 /* Header: Logo and Hamberger */
@@ -66,9 +72,6 @@ body {
 .header__logo-con {
   width: 100%;
   display: flex;
-  position: fixed;
-  top: 0;
-  left: 0;
   justify-content: space-between;
   align-items: center;
 }
@@ -97,23 +100,9 @@ body {
   font-size: 16px;
 }
 
-/* Header: Logo and Hamberger when is NOT at the top */
-
-.header__logo-con {
-  background-color: White;
-}
-
-.header__logo-con--logo img {
-  filter: none;
-}
-
-.header__logo-con--hamberger i {
-  color: #014599;
-}
-
 /* Header: Logo and Hamberger when is at the top */
 
-.header--top .header__logo-con {
+.header--top {
   background-color: transparent;
 }
 
@@ -123,6 +112,22 @@ body {
 
 .header--top .header__logo-con--hamberger i {
   color: white;
+}
+
+/* Header: Mobile clicked */
+
+.mobile--clicked {
+  background-color: white;
+}
+
+.header__logo-con--logo img,
+.mobile--clicked .header__logo-con--logo img {
+  filter: none;
+}
+
+.mobile--clicked .header__logo-con--hamberger i,
+.header__logo-con--hamberger i {
+  color: #014599;
 }
 
 /* Header: Menu */
@@ -157,14 +162,37 @@ body {
   margin-right: 10px;
 }
 
+/* Header: Menu */
+
 .header__menu {
+  display: none;
   position: absolute;
+  background-color: #014599;
   top: 60px;
   padding: 20px;
 }
 
+/* Menu - When cliked */
+
+.mobile--clicked {
+  display: block;
+}
+
+.mobile--clicked .header__logo-con--hamberger .fa-bars {
+  display: none;
+}
+
+.mobile--clicked .header__logo-con--hamberger .fa-times {
+  display: block;
+}
+
+/* Header: Menu depth 1 */
+
 .header__nav__depth1 li {
   border-top: 1px solid #012859;
+}
+
+.header__nav__depth1 li:last-child {
   border-bottom: 1px solid #012859;
 }
 
@@ -177,4 +205,30 @@ body {
   content: "+";
   margin-right: 16px;
   color: #86bcff;
+}
+
+/* Header: Menu depth 2 */
+
+.header__nav__depth2 {
+  margin-left: 25px;
+  background-color: #013e89;
+  border: 1px solid #01387b;
+  color: #ccc;
+  border-radius: 3px;
+  margin-bottom: 16px;
+}
+
+.header__nav__depth2 li {
+  border: none;
+}
+
+.header__nav__depth2 li a {
+  padding: 15px;
+  font-size: 14px;
+}
+
+.header__nav__depth2 li span::before {
+  content: "-";
+  margin-right: 10px;
+  color: #ccc;
 }

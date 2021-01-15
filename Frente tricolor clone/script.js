@@ -1,6 +1,12 @@
+const HEADER_TOP = "header--top";
+const MOBILE_CLICKED = "mobile--clicked";
+
+const header = document.querySelector(".header");
+const menu = document.querySelector(".header__menu");
+const hamberger = document.querySelector(".fa-bars");
+const closeMenu = document.querySelector(".fa-times");
+
 function changeHeaderBG() {
-  const HEADER_TOP = "header--top";
-  const header = document.querySelector(".header");
   if (window.pageYOffset < 200) {
     header.classList.add(HEADER_TOP);
   } else {
@@ -13,8 +19,21 @@ function handleHeaderBG(event) {
   window.addEventListener("scroll", changeHeaderBG);
 }
 
-function init() {
-  handleHeaderBG();
+handleHeaderBG();
+
+function toggleMenu() {
+  if (header.classList.contains(MOBILE_CLICKED)) {
+    header.classList.remove(MOBILE_CLICKED);
+    menu.classList.remove(MOBILE_CLICKED);
+  } else {
+    header.classList.add(MOBILE_CLICKED);
+    menu.classList.add(MOBILE_CLICKED);
+  }
 }
 
-init();
+function handleMenu() {
+  hamberger.addEventListener("click", toggleMenu);
+  closeMenu.addEventListener("click", toggleMenu);
+}
+
+handleMenu();
