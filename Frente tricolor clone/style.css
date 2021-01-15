@@ -591,7 +591,6 @@ textarea {
 
   .notice__list {
     column-count: 2;
-    column-width: 50%;
   }
 
   /* Main Insta */
@@ -640,7 +639,10 @@ textarea {
 
   .notice__list {
     column-count: 4;
-    column-width: 25%;
+  }
+
+  .notice__item {
+    margin-bottom: 0;
   }
 
   /* Main: Insta */
