@@ -467,7 +467,7 @@ body {
 
   /* Carousel */
 
-  ..main__slider-wrapper,
+  .main__slider-wrapper,
   .main__slider--pattern,
   .main__slider--slide,
   .main__slider--button {
