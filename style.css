@@ -85,20 +85,21 @@ textarea {
 }
 
 .nav-list {
-  display: flex;
-  flex-direction: column;
+  display: grid;
 }
 
 .nav-item a {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 90%;
-  height: 320px;
+  width: 288px;
+  max-width: 310px;
+  height: 310px;
   margin: 0 auto 10px;
   border-bottom: 5px solid #e38792;
   border-radius: 5px;
   background-color: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 .nav-item a:hover {
@@ -127,9 +128,8 @@ textarea {
 
 @media screen and (min-width: 768px) {
   .nav-list {
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
   }
 
   .nav-item {
@@ -137,7 +137,7 @@ textarea {
   }
 
   .nav-item a {
-    width: 320px;
+    width: 310px;
     margin: 0 auto;
   }
 
@@ -147,5 +147,11 @@ textarea {
     flex-direction: row;
     justify-content: space-between;
     align-content: center;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .nav-list {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
