@@ -819,4 +819,9 @@ textarea {
   .notice__item--title {
     font-size: 14px;
   }
+
+  body {
+    max-width: 1350px;
+    margin: 0 auto;
+  }
 }
